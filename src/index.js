@@ -1,11 +1,18 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 
 import './style.scss';
 
-let num = 0;
-function secondCounter() {
-  $('#main').html('You&#39;ve been on this page for ' + num + ' seconds.');
-  num += 1;
-}
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-setInterval(secondCounter, 1000);
+const App = () => <div className="test">All the REACT are belong to us!</div>;
+
+ReactDOM.render(<App />, document.getElementById('main'));
+
+// let num = 0;
+// function secondCounter() {
+//   $('#main').html('You&#39;ve been on this page for ' + num + ' seconds.');
+//   num += 1;
+// }
+
+// setInterval(secondCounter, 1000);
