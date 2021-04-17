@@ -1,4 +1,3 @@
-// const $ = require('jquery');
 import $ from 'jquery';
 
 import './style.scss';
