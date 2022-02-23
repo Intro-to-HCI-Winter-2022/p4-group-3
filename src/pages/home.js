@@ -16,7 +16,6 @@ class Home extends Component {
   }
 
   showLogin = () => {
-    console.log(this.props.showModal);
     this.props.toggleModal();
     this.setState({
       type: 'login',

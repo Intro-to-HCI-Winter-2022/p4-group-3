@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-// import { withRouter } from 'react-router-dom';
-// import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { toggleModal } from '../actions';
+import Button from './button';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Modal extends Component {
@@ -26,7 +28,7 @@ class Modal extends Component {
   render() {
     return (
       <div className="modal">
-        <div className="cancel">X</div>
+        <Button text="X" onClick={this.props.toggleModal} />
         {this.props.type === 'login' && this.renderLogin()}
         {this.props.type === 'signup' && this.renderSignup()}
       </div>
@@ -34,4 +36,10 @@ class Modal extends Component {
   }
 }
 
-export default Modal;
+function mapStateToProps(state) {
+  return {
+    showModal: state.modal.modalState,
+  };
+}
+
+export default withRouter(connect(mapStateToProps, { toggleModal })(Modal));
