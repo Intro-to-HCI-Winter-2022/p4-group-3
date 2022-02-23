@@ -1,19 +1,11 @@
 // keys for actiontypes
 export const ActionTypes = {
-  INCREMENT: 'INCREMENT',
-  DECREMENT: 'DECREMENT',
+  TOGGLE_MODAL: 'TOGGLE_MODAL',
 };
 
-export function increment() {
+export function toggleModal() {
   return {
-    type: ActionTypes.INCREMENT,
-    payload: null,
-  };
-}
-
-export function decrement() {
-  return {
-    type: ActionTypes.DECREMENT,
+    type: ActionTypes.TOGGLE_MODAL,
     payload: null,
   };
 }

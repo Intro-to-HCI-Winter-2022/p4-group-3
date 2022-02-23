@@ -2,10 +2,10 @@
 // this defines what your store state will look like
 import { combineReducers } from 'redux';
 
-import CountReducer from './count-reducer';
+import ModalReducer from './modal';
 
 const rootReducer = combineReducers({
-  count: CountReducer,
+  modal: ModalReducer,
 });
 
 export default rootReducer;

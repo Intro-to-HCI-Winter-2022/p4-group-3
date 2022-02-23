@@ -17,8 +17,8 @@ class Header extends Component {
           <p className="logo">DARTMOUTH HOUSING</p>
         </div>
         <div className="rightHeaderContainer">
-          <Button text="LOG IN" type="bigButton" />
-          <Button id="signup" text="SIGN UP" type="bigButton" />
+          <Button text="LOG IN" type="bigButton" onClick={this.props.onLoginClick} />
+          <Button id="signup" text="SIGN UP" type="bigButton" onClick={this.props.onSignupClick} />
         </div>
       </div>
     );

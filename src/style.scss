@@ -3,7 +3,7 @@ body, html {
   // background: linear-gradient(to bottom, purple 0%,#53cbf1 40%,#05abe0 100%);
   height: 100%;
   margin: 0;
-  background-color: #CACACA;
+  background-color: #F0EFEF;
 }
 
 // PAGES
@@ -62,6 +62,7 @@ body, html {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  color: #424141;
 }
 
 #mainName {
@@ -72,4 +73,32 @@ body, html {
 
 #mainSubtitle {
   font-size: 30px;
+}
+
+// MODAL
+
+.modal {
+  font-size: 30px;
+  height: 10em;
+  width: 20em;
+  border-radius: 40px;
+  background-color: pink;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// From https://stackoverflow.com/questions/31054353/darken-the-entire-page-when-opening-and-produce-a-fade-out-effect-when-closing-a
+#page-mask {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
