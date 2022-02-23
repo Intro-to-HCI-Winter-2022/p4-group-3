@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from '../components/header';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Home extends Component {
@@ -11,7 +12,14 @@ class Home extends Component {
 
   render() {
     return (
-      <h1>Home</h1>
+      <div className="pageContainer">
+        <Header />
+        <div className="landingPageContainer">
+          <p id="mainName">DARTMOUTH HOUSING</p>
+          <p id="mainSubtitle">FIND YOUR PERFECT HOME</p>
+        </div>
+      </div>
+
     );
   }
 }
