@@ -1,7 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Header from '../components/header';
+import Button from '../components/button';
 
 const listings = [
   {
@@ -63,7 +65,7 @@ class Dashboard extends Component {
                 <div className="listingPrice">
                   <img alt="money" src="src/img/money-bill.png" height="15" />
                   <p id="indent">{item.price}</p>
-                  <img alt="bed" src="src/img/bed.png" height="15" />
+                  <img alt="bed" src="src/img/bed.png" height="12" />
                   <p id="indent">{item.bed}</p>
                   <img alt="bath" src="src/img/bath.png" height="15" />
                   <p id="indent">{item.bath}</p>
@@ -104,7 +106,78 @@ class Dashboard extends Component {
             <div className="listingsContainer">
               {this.renderListings()}
             </div>
-            <div className="filterContainer">foo</div>
+            <div className="filterContainer">
+              <div className="filterTop">
+                <p>I'm looking for...</p>
+              </div>
+              <div className="filterPrice">
+                <div>
+                  <p>Price min</p>
+                  <div className="filterPrice">
+                    <p>$</p>
+                    <input className="smallInput" />
+                  </div>
+                </div>
+                <div>
+                  <p id="marginLeft">Price max</p>
+                  <div className="filterPrice">
+                    <p id="marginLeft">$</p>
+                    <input className="smallInput" />
+                  </div>
+                </div>
+              </div>
+              <div className="filterBed">
+                <img alt="bed" src="src/img/bed.png" height="12" />
+                <input className="smallInput" id="marginLeft" />
+              </div>
+              <div className="filterBath">
+                <img alt="bath" src="src/img/bath.png" height="20" />
+                <input className="smallInput" id="marginLeft" />
+              </div>
+              <div className="filterLocation">
+                <p>Houses in...</p>
+                <div className="row">
+                  <div className="rowSide"><input className="checkInput" type="checkbox" />
+                    <p>Hanover</p>
+                  </div>
+                  <div className="rowSide"><input className="checkInput" type="checkbox" />
+                    <p>Norwich</p>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="rowSide"><input className="checkInput" type="checkbox" />
+                    <p>Lebanon</p>
+                  </div>
+                  <div className="rowSide"><input className="checkInput" type="checkbox" />
+                    <p>Lyme</p>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="rowSide"><input className="checkInput" type="checkbox" />
+                    <p>WRJ</p>
+                  </div>
+                  <div className="rowSide"><input className="checkInput" type="checkbox" />
+                    <p>Etna</p>
+                  </div>
+                </div>
+              </div>
+              <div className="filterDate">
+                <div id="marginBottom" className="row">
+                  <p>Starts after</p>
+                  <input className="smallInput" />
+                </div>
+                <div className="row">
+                  <p>Ends before</p>
+                  <input className="smallInput" />
+                </div>
+              </div>
+              <div className="filterButtons">
+                <div className="row">
+                  <Button text="FILTER" type="smallButton" />
+                  <Button text="RESET" type="smallButton" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
