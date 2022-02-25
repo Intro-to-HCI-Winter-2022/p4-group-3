@@ -1,13 +1,11 @@
-# Title
+# Dartmouth Housing
 
-*description*
+To see the final product, visit the link below.
 
-[deployed url](http://url-if-deployed-here)
+[deployed url](https://dartgo.org/dartmouth-housing)
 
-## What Worked Well
+To run this code locally, clone the repo.
 
-## What Didn't
+Then run `npm install` followed by `npm start`.
 
-## Extra Credit
-
-## Screenshots
+This should result in a localhost link being generated.
