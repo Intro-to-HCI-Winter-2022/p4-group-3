@@ -13,7 +13,7 @@ const listings = [
     util: 'incl',
     range: '9/1/21 - 8/31/22',
     appStatus: 'Accepting Applicants',
-    img: 'path',
+    img: 'src/img/unsplash_178j8tJrNlc.png',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem',
   },
   {
@@ -25,7 +25,7 @@ const listings = [
     util: 'incl',
     range: '9/1/21 - 8/31/22',
     appStatus: 'Accepting Applicants',
-    img: 'path',
+    img: 'src/img/unsplash_178j8tJrNlc.png',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem',
   },
   {
@@ -37,7 +37,7 @@ const listings = [
     util: 'incl',
     range: '9/1/21 - 8/31/22',
     appStatus: 'Accepting Applicants',
-    img: 'path',
+    img: 'src/img/unsplash_178j8tJrNlc.png',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem',
   },
 ];
@@ -52,9 +52,38 @@ class Dashboard extends Component {
   }
 
   renderListings = () => {
-    return listings.map((item) => {
+    return listings.map((item, index) => {
       return (
-        <p>RENDER LISTINGS HERE</p>
+        <div key={index.toString()} className="listingContainer">
+          <div className="listingLeft">
+            <div className="listingLeftTop">
+              <div className="listingLeftTopLeft">
+                <p id="title">{item.title}</p>
+                <p>{item.address}</p>
+                <div className="listingPrice">
+                  <img alt="money" src="src/img/money-bill.png" height="15" />
+                  <p id="indent">{item.price}</p>
+                  <img alt="bed" src="src/img/bed.png" height="15" />
+                  <p id="indent">{item.bed}</p>
+                  <img alt="bath" src="src/img/bath.png" height="15" />
+                  <p id="indent">{item.bath}</p>
+                  <img alt="util" src="src/img/util.png" height="15" />
+                  <p>{item.util}</p>
+                </div>
+              </div>
+              <div className="listingLeftTopRight">
+                <p>{item.range}</p>
+                <p>{item.appStatus}</p>
+              </div>
+            </div>
+            <div className="listingLeftBottom">
+              <p id="description">{item.description}</p>
+            </div>
+          </div>
+          <div className="listingRight">
+            <img id="listingImage" src={item.img} alt="house" />
+          </div>
+        </div>
       );
     });
   }
