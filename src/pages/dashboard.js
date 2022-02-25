@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import Header from '../components/header';
 import Button from '../components/button';
 
@@ -56,36 +55,38 @@ class Dashboard extends Component {
   renderListings = () => {
     return listings.map((item, index) => {
       return (
-        <div key={index.toString()} className="listingContainer">
-          <div className="listingLeft">
-            <div className="listingLeftTop">
-              <div className="listingLeftTopLeft">
-                <p id="title">{item.title}</p>
-                <p>{item.address}</p>
-                <div className="listingPrice">
-                  <img alt="money" src="src/img/money-bill.png" height="15" />
-                  <p id="indent">{item.price}</p>
-                  <img alt="bed" src="src/img/bed.png" height="12" />
-                  <p id="indent">{item.bed}</p>
-                  <img alt="bath" src="src/img/bath.png" height="15" />
-                  <p id="indent">{item.bath}</p>
-                  <img alt="util" src="src/img/util.png" height="15" />
-                  <p>{item.util}</p>
+        <NavLink key={index.toString()} id="listingNav" to="/listing">
+          <div className="listingContainer">
+            <div className="listingLeft">
+              <div className="listingLeftTop">
+                <div className="listingLeftTopLeft">
+                  <p id="title">{item.title}</p>
+                  <p>{item.address}</p>
+                  <div className="listingPrice">
+                    <img alt="money" src="src/img/money-bill.png" height="15" />
+                    <p id="indent">{item.price}</p>
+                    <img alt="bed" src="src/img/bed.png" height="12" />
+                    <p id="indent">{item.bed}</p>
+                    <img alt="bath" src="src/img/bath.png" height="15" />
+                    <p id="indent">{item.bath}</p>
+                    <img alt="util" src="src/img/util.png" height="15" />
+                    <p>{item.util}</p>
+                  </div>
+                </div>
+                <div className="listingLeftTopRight">
+                  <p>{item.range}</p>
+                  <p>{item.appStatus}</p>
                 </div>
               </div>
-              <div className="listingLeftTopRight">
-                <p>{item.range}</p>
-                <p>{item.appStatus}</p>
+              <div className="listingLeftBottom">
+                <p id="description">{item.description}</p>
               </div>
             </div>
-            <div className="listingLeftBottom">
-              <p id="description">{item.description}</p>
+            <div className="listingRight">
+              <img id="listingImage" src={item.img} alt="house" />
             </div>
           </div>
-          <div className="listingRight">
-            <img id="listingImage" src={item.img} alt="house" />
-          </div>
-        </div>
+        </NavLink>
       );
     });
   }
@@ -93,14 +94,14 @@ class Dashboard extends Component {
   render() {
     return (
       <div className="pageContainer">
-        <Header onLoginClick={this.showLogin} onSignupClick={this.showSignup} />
+        <Header type="dashboard" onLoginClick={this.showLogin} onSignupClick={this.showSignup} />
         <div className="dashboardContainer">
           <div className="dashTop">
             <div className="dashTopLeft">
               <p>DASHBOARD</p>
               <input className="searchInput" placeholder="Search" />
             </div>
-            <div className="spacer" />
+            <div className="filterContainer" id="noBackground" />
           </div>
           <div className="dashBody">
             <div className="listingsContainer">
