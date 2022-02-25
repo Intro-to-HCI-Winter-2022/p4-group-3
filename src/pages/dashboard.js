@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import { withRouter, connect } from 'react-router';
 import Header from '../components/header';
 import Button from '../components/button';
 
