@@ -57,6 +57,12 @@ body, html {
   color: #424141;
 }
 
+.smallButton {
+  width: 7.5em;
+  font-size: 12px;
+  padding: 1.5em;
+}
+
 #signup {
   margin-left: 1em;
 }
@@ -192,12 +198,6 @@ body, html {
   justify-content: space-between;
 }
 
-.filterContainer {
-  display: flex;
-  flex: 3;
-  // background-color: green;
-}
-
 .listingsContainer {
   display: flex;
   flex-direction: column;
@@ -280,4 +280,98 @@ body, html {
 
 #indent {
   margin-right: 1em;
+}
+
+// FILTER
+
+.filterContainer {
+  display: flex;
+  flex: 1.5;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  padding: 1em;
+  height: fit-content;
+
+  p {
+    margin: 0;
+  }
+
+  input {
+    width: 3em;
+    border: none;
+    outline: none;
+    background-color: #e5e5e5;
+    border-radius: 15px;
+  }
+}
+
+#marginLeft {
+  margin-left: 1em;
+}
+
+.filterTop {
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+
+.filterPrice {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: .5em;
+  font-size: 12px;
+}
+
+.filterBed {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: .5em;
+}
+
+.filterBath {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: .5em;
+}
+
+.filterLocation {
+  input {
+    margin: 0;
+    padding: 0;
+    width: 1em;
+  }
+  margin-bottom: .5em;
+}
+
+.row {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .rowSide {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+
+    p {
+      margin-left: .25em;
+    }
+  }
+}
+
+.filterDate {
+  margin-bottom: .5em;
+}
+
+#marginBottom {
+  margin-bottom: .5em;
+}
+
+.filterButtons {
+
 }
