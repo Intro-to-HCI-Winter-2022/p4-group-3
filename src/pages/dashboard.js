@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { withRouter, connect } from 'react-router';
 import Header from '../components/header';
 import Button from '../components/button';
 
@@ -187,10 +186,4 @@ class Dashboard extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    showModal: state.modal.modalState,
-  };
-}
-
-export default withRouter(connect(mapStateToProps)(Dashboard));
+export default Dashboard;
