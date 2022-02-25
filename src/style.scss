@@ -214,3 +214,70 @@ body, html {
   border: none;
   outline: none;
 }
+
+//  LISTING
+
+.listingContainer {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+  margin-bottom: 1em;
+  padding: 1em 2em 1em 2em;
+  font-size: 16px;
+}
+
+.listingContainer p {
+  margin: 0;
+}
+
+.listingLeft {
+  display: flex;
+  flex: 9;
+  width: 100%;
+  // background-color: yellow;
+  flex-direction: column;
+}
+
+.listingLeftTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.listingLeftTopRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.listingRight {
+  display: flex;
+  flex: 2;
+  // background-color: green;
+}
+
+#description {
+  margin-top: 1em;
+}
+
+#listingImage {
+  object-fit: contain;
+  max-width: 180px;
+  margin-left: 1em;
+}
+
+#title {
+  font-weight: bold;
+}
+
+.listingPrice {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#indent {
+  margin-right: 1em;
+}
