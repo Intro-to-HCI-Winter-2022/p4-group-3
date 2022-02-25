@@ -32,7 +32,7 @@ class Home extends Component {
   render() {
     return (
       <div className="pageContainer">
-        <Header onLoginClick={this.showLogin} onSignupClick={this.showSignup} />
+        <Header type="home" onLoginClick={this.showLogin} onSignupClick={this.showSignup} />
         <div className="landingPageContainer">
           <p id="mainName">DARTMOUTH HOUSING</p>
           <p id="mainSubtitle">FIND YOUR PERFECT HOME</p>

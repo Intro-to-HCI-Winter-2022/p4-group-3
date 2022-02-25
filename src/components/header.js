@@ -3,12 +3,13 @@ import Button from './button';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Header extends Component {
-  // constructor(props) {
-  //     super(props);
+  constructor(props) {
+    super(props);
 
-  //     this.state = {
-  //     }
-  // }
+    this.state = {
+      type: this.props.type,
+    };
+  }
 
   render() {
     return (
@@ -17,8 +18,8 @@ class Header extends Component {
           <p className="logo">DARTMOUTH HOUSING</p>
         </div>
         <div className="rightHeaderContainer">
-          <Button text="LOG IN" type="bigButton" onClick={this.props.onLoginClick} />
-          <Button id="signup" text="SIGN UP" type="bigButton" onClick={this.props.onSignupClick} />
+          {this.state.type === 'home' && <Button text="LOG IN" type="bigButton" onClick={this.props.onLoginClick} />}
+          {this.state.type === 'home' && <Button id="signup" text="SIGN UP" type="bigButton" onClick={this.props.onSignupClick} />}
         </div>
       </div>
     );
