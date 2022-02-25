@@ -49,10 +49,22 @@ body, html {
   width: 6em;
   border-radius: 50px;
   font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #424141;
 }
 
 #signup {
   margin-left: 1em;
+}
+
+.disabledNavlink {
+  background-color: darkgrey;
+  color: #F9F1F7;
+  cursor: not-allowed;
 }
 
 // LANDING PAGE
@@ -79,7 +91,7 @@ body, html {
 
 .modal {
   font-size: 30px;
-  height: 10em;
+  height: 14em;
   width: 20em;
   border-radius: 40px;
   background-color: #F0EFEF;
@@ -89,7 +101,7 @@ body, html {
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding-top: 1em;
   align-items: center;
 }
 
@@ -101,4 +113,38 @@ body, html {
   right: 0;
   bottom: 0;
   left: 0;
+}
+.exitModal {
+  width: 90%;
+  display: flex;
+  justify-content: right;
+}
+
+.authContainer {
+  display: flex;
+  flex-direction: column;
+  // background-color: blue;
+  align-items: center;
+  justify-content: flex-start;
+  height: 12em;
+}
+
+.authTitle {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+.modalInput {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  border-radius: 20px;
+  padding: .25em 1.25em .25em 1.25em;
+  width: 15em;
+  margin-bottom: 1em;
+  border: none;
+  outline: none;
+}
+
+#endInput {
+  margin-bottom: 2em;
 }
